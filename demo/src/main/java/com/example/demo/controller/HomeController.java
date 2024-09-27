@@ -12,4 +12,11 @@ public class HomeController {
         model.addAttribute("message", "Welcome to Spring Boot MVC!");
         return "home"; // Returns the view name 'home.html'
     }
+
+    @GetMapping("/about")
+    public String about(Model model) {
+        model.addAttribute("info", "This is a simple Spring Boot MVC application.");
+        return "about"; // Returns the view name 'about.html'
+    }
+
 }
